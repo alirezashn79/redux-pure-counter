@@ -7,13 +7,37 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Counter</title>
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <h1>Redux running</h1>
+    <!-- container -->
+    <div class="container h-screen flex items-center">
+      <!-- wrapper -->
+      <div
+        class="border-x-4 border-x-sky-700 rounded-xl shadow-white w-1/2 mx-auto h-4/5 overflow-hidden flex flex-col justify-between"
+      >
+        <!-- top label -->
+        <div class="h-10 bg-sky-700 w-full"></div>
+        <!-- content -->
+        <div class="flex-center flex-col gap-y-40">
+          <!-- number -->
+          <h1 id="num" class="text-9xl font-bold">0</h1>
+          <!-- btn wrapper -->
+          <div class="flex w-full justify-around">
+            <button id="decrement" class="btn">-</button>
+            <button id="reset" class="btn">reset</button>
+            <button id="increment" class="btn">+</button>
+          </div>
+        </div>
+        <!-- bottom label -->
+        <div class="h-10 w-full bg-sky-700"></div>
+      </div>
+    </div>
 
     <!--    scripts-->
-    <script src="js/redux.min.js"></script>
-    <script src="js/app.js"></script>
+    <!--    <script src="js/redux.min.js"></script>-->
+    <script src="js/redux.legacy-esm.min.js" type="module"></script>
+    <script src="js/app.js" type="module"></script>
   </body>
 </html>
